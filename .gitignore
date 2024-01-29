@@ -1,0 +1,8 @@
+### Ajouter Java 22 dans le $PATH si besoin
+/.envrc
+
+### IntelliJ IDEA ###
+idea-build/
+
+### Application ###
+build/
