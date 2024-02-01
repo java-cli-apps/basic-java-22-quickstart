@@ -1,11 +1,9 @@
-///usr/bin/env java --source 22 --class-path $APP_DIR/lib/'*' --enable-preview "$0" "$@"; exit $?
-
-import fr.Hello;
+///usr/bin/env java --source 22 --enable-preview --class-path $APP_DIR/lib/'*' "$0" "$@"; exit $?
 
 class Main {
     void main() {
         switch (Language.guess()) {
-            case French -> Hello.main();
+            case French -> fr.Hello.main();
             case English -> en.Hello.main();
         }
         System.exit(0);
