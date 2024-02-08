@@ -12,13 +12,13 @@ clean:
 	rm --force --recursive $(BUILD)
 
 test:
-	./bin/$(APP_NAME).sh
+	./bin/$(STARTER_APP).sh
 
 test-from-java:
-	APP_DIR=. ./src/$(APP_NAME).java
+	APP_DIR=. ./src/$(STARTER_APP).java
 
 test-install: .check-install-dir
-	PATH=$(PREFIX)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh
+	PATH=$(PREFIX)/$(APP_DIR)/bin:$(PATH) $(STARTER_APP).sh
 
 .check-install-dir:
 	@test -n '$(PREFIX)' || { \
@@ -27,6 +27,8 @@ test-install: .check-install-dir
 	}
 
 APP_NAME := $(or $(APP_NAME), "BasicQuickstart")
+
 APP_DIR = $(APP_NAME)
 BUILD = build
+STARTER_APP = Application
 BUILD_APP = $(BUILD)/$(APP_DIR)
