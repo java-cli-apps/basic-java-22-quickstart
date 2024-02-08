@@ -2,7 +2,7 @@ package: build
 	cd $(BUILD) && zip --recurse-paths $(APP_NAME).zip $(APP_DIR)
 
 build: clean
-	mkdir --parents $(BUILD_APP)/src/{fr,en} $(BUILD_APP)/lib $(BUILD_APP)/bin
+	mkdir --parents $(BUILD_APP)/src $(BUILD_APP)/lib $(BUILD_APP)/bin
 	cp --recursive src lib bin $(BUILD_APP)
 
 install: .check-install-dir
