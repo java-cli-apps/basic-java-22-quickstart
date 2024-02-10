@@ -8,9 +8,10 @@ get_absolute_path() {
     realpath "$path"
 }
 
-script_name=$(basename "$0")
-app_name=${script_name/sh/java}
+shell_script_name=$(basename "$0")
 bin_dir=$(get_absolute_path "$(dirname "$0")")
-app_dir=$(dirname "${bin_dir}")
 
-APP_DIR=${app_dir} "${app_dir}/src/${app_name}" "$@"
+app_dir=$(dirname "${bin_dir}")
+java_file_name=${shell_script_name/sh/java}
+
+APP_DIR=${app_dir} "${app_dir}/src/${java_file_name}" "$@"
