@@ -8,10 +8,17 @@ get_absolute_path() {
     realpath "$path"
 }
 
-shell_script_name=$(basename "$0")
-bin_dir=$(get_absolute_path "$(dirname "$0")")
+get_application_dir() {
+  local bin_dir=$(get_absolute_path "$(dirname "$1")")
+  dirname "${bin_dir}"
+}
 
-app_dir=$(dirname "${bin_dir}")
-java_file_name=${shell_script_name/sh/java}
+get_application_file() {
+  local startup_script=$(basename "$1")
+  echo ${startup_script/sh/java}
+}
 
-APP_DIR=${app_dir} "${app_dir}/src/${java_file_name}" "$@"
+app_dir=$(get_application_dir "$0")
+app_file=$(get_application_file "$0")
+
+APP_DIR=${app_dir} "${app_dir}/src/${app_file}" "$@"
