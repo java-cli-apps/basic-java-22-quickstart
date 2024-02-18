@@ -54,21 +54,21 @@ Cela permet d'ajouter plusieurs applications dans le `PATH` et donc d'invoquer d
 ## Installer l'application
 
 ```bash
-DEST_DIR=/tmp APP_NAME=MyCmdLine make install
+DEST_DIR=/home/user APP_NAME=MyCmdLine make install
 ```
 
 ```console
-unzip -q -d /tmp build/MyCmdLine.zip
+unzip -q -d /home/user build/MyCmdLine.zip
 ```
 
 ## Lancer l'application installée
 
 ```bash
-DEST_DIR=/tmp APP_NAME=MyCmdLine make test-install
+DEST_DIR=/home/user APP_NAME=MyCmdLine make test-install
 ```
 
 ```console
-PATH=/tmp/MyCmdLine/bin:/usr/lib/jvm/jdk-22/bin:/home/fopy/.local/bin:... MyCmdLine.sh
+PATH=/home/user/MyCmdLine/bin:/usr/lib/jvm/jdk-22/bin:/home/fopy/.local/bin:... MyCmdLine.sh
 Bonjour 🇫🇷
 ```
 
