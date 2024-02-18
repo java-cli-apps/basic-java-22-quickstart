@@ -35,17 +35,21 @@ APP_NAME=MyCmdLine make package
 ```
 
 ```console
-mkdir --parents build/MyApp/src build/MyApp/lib build/MyApp/bin
-cp --update --recursive src lib bin build/MyApp
-cd build/MyApp \
-	&& mv src/Application.java src/MyApp.java \
-	&& mv bin/Application.sh bin/MyApp.sh
+mkdir --parents build/MyCmdLine/src build/MyCmdLine/lib build/MyCmdLine/bin
+cp --update --recursive src lib bin build/MyCmdLine
+cd build/MyCmdLine \
+	&& mv src/Application.java src/MyCmdLine.java \
+	&& mv bin/Application.sh bin/MyCmdLine.sh
 cd build \
-	&& zip --quiet --recurse-paths MyApp.zip MyApp
+	&& zip --quiet --recurse-paths MyCmdLine.zip MyCmdLine
 ```
 
-Les fichiers `Application.sh` et `Application.java` sont renommés lors de la construction du package, ce qui permet
-d'ajouter [plusieurs applications](#lancer-lapplication-installée) dans le `PATH`.
+### Shell de lancement
+
+Le script de lancement [Application.sh](bin/Application.sh), dont le rôle est de lancer le fichier
+[Application.java](src/Application.java), est renommé lors de la construction du package en `MyCmdLine.sh`.
+
+Cela permet d'ajouter plusieurs applications dans le `PATH` et donc d'invoquer directement `MyCmdLine.sh`.
 
 ## Installer l'application
 
