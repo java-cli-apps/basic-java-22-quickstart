@@ -35,10 +35,17 @@ APP_NAME=MyCmdLine make package
 ```
 
 ```console
-mkdir --parents build/MyCmdLine/src build/MyCmdLine/lib build/MyCmdLine/bin
-cp --recursive src lib bin build/MyCmdLine
-cd build && zip --quiet --recurse-paths MyCmdLine.zip MyCmdLine
+mkdir --parents build/MyApp/src build/MyApp/lib build/MyApp/bin
+cp --update --recursive src lib bin build/MyApp
+cd build/MyApp \
+	&& mv src/Application.java src/MyApp.java \
+	&& mv bin/Application.sh bin/MyApp.sh
+cd build \
+	&& zip --quiet --recurse-paths MyApp.zip MyApp
 ```
+
+Les fichiers `Application.sh` et `Application.java` sont renommés lors de la construction du package, ce qui permet
+d'ajouter [plusieurs applications](#lancer-lapplication-installée) dans le `PATH`.
 
 ## Installer l'application
 
@@ -57,7 +64,7 @@ DEST_DIR=/tmp APP_NAME=MyCmdLine make test-install
 ```
 
 ```console
-PATH=/tmp/MyCmdLine/bin:/usr/lib/jvm/jdk-22/bin:/home/fopy/.local/bin:... Application.sh
+PATH=/tmp/MyCmdLine/bin:/usr/lib/jvm/jdk-22/bin:/home/fopy/.local/bin:... MyCmdLine.sh
 Bonjour 🇫🇷
 ```
 

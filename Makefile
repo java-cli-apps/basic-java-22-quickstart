@@ -4,11 +4,15 @@ help:
 		| awk 'BEGIN {FS = ":.*?## "}; { printf("\033[36m%-30s\033[0m %s\n", $$1, $$2) }'
 
 package: build ## Packager l'application dans un fichier .zip
-	cd $(BUILD) && zip --quiet --recurse-paths $(APP_NAME).zip $(APP_DIR)
+	cd $(BUILD) \
+		&& zip --quiet --recurse-paths $(APP_NAME).zip $(APP_DIR)
 
 build: ## Construire l'application
 	mkdir --parents $(BUILD_APP)/src $(BUILD_APP)/lib $(BUILD_APP)/bin
 	cp --update --recursive src lib bin $(BUILD_APP)
+	cd $(BUILD_APP) \
+		&& mv src/$(STARTER_APP).java src/$(APP_NAME).java \
+		&& mv bin/$(STARTER_APP).sh bin/$(APP_NAME).sh
 
 install: .check-install-dir ## Installer le package de l'application
 	unzip -q -d $(DEST_DIR) $(BUILD)/$(APP_NAME).zip
@@ -20,7 +24,7 @@ test-from-java: ## Tester l'application localement (en lançant le fichier .java
 	./src/$(STARTER_APP).java
 
 test-install: .check-install-dir ## Tester l'application installée
-	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(STARTER_APP).sh
+	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh
 
 clean: ## Nettoyer le répertoire de build
 	rm --force --recursive $(BUILD)
