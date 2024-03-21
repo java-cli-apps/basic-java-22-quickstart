@@ -18,7 +18,7 @@ comme décrit dans la [JEP 330](https://openjdk.org/jeps/330).
 
 ## Changer le nom de l'application
 
-Pour changer le nom de l'application, initialement nommée Basic-Quickstart, il faut modifier la variable APP_NAME dans
+Pour changer le nom de l'application, initialement nommée _Basic-Quickstart_, il faut modifier la variable APP_NAME dans
 le fichier `.envrc`, par exemple comme suit :
 
 ```bash
