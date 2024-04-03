@@ -10,12 +10,6 @@ Le package de l'application comprend les sources ainsi que ses dépendances.
 
 Pour démarrer une nouvelle application en utilisant ce template, vous pouvez suivre les étapes suivantes.
 
-## Version de Java
-
-Si vous n'avez pas Java 22, vous pouvez utiliser le template [basic-java-quickstart](https://github.com/java-cli-apps/basic-java-quickstart)
-qui ne requiert que la version 11 de Java. Il est alors nécessaire que tout le code Java réside dans le même fichier
-comme décrit dans la [JEP 330](https://openjdk.org/jeps/330).
-
 ## Changer le nom de l'application
 
 Pour changer le nom de l'application, initialement nommée _Basic-Quickstart_, il faut modifier la variable APP_NAME dans
@@ -85,3 +79,9 @@ Il ne nous reste plus qu'à :
 - Implémenter notre métier dans [Application.java](src/Application.java)
 - Ajouter les [fichiers](src/fr/Hello.java) qui déclarent les classes utilisées par `Application.java`
 - Ajouter les jars de nos dépendances dans le répertoire [lib](lib)
+
+## Autres templates
+
+Si vous n'avez pas Java 22, vous pouvez utiliser le template [basic-java-quickstart](https://github.com/java-cli-apps/basic-java-quickstart)
+qui ne requiert que la version 11 de Java. Il est alors nécessaire que tout le code Java réside dans le même fichier
+comme décrit dans la [JEP 330](https://openjdk.org/jeps/330).
