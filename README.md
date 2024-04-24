@@ -4,7 +4,7 @@ Le template **basic-java-22-quickstart** permet de démarrer une nouvelle applic
 utiliser aucun système de build (autre que `make`).
 
 Ce template nécessite d'utiliser Java 22, ou une version supérieure, car il utilise la [JEP 458](https://openjdk.org/jeps/458) 
-qui permet de lancer plusieurs fichiers sources sans les compiler préalablement.
+qui permet de lancer un programme contenant plusieurs fichiers sources sans les compiler préalablement.
 
 Le package de l'application comprend les sources ainsi que ses dépendances.
 
@@ -12,7 +12,7 @@ Pour démarrer une nouvelle application en utilisant ce template, vous pouvez su
 
 ## Changer le nom de l'application
 
-Pour changer le nom de l'application, initialement nommée _Basic-Quickstart_, il faut modifier la variable APP_NAME dans
+Pour changer le nom de l'application, initialement nommée _BasicQuickstart_, il faut modifier la variable APP_NAME dans
 le fichier `.envrc`, par exemple comme suit :
 
 ```bash
@@ -77,7 +77,7 @@ Bonjour 🇫🇷
 Il ne nous reste plus qu'à :
 
 - Implémenter notre métier dans [Application.java](src/Application.java)
-- Ajouter les [fichiers](src/fr/Hello.java) qui déclarent les classes utilisées par `Application.java`
+- Ajouter les fichiers qui déclarent les classes utilisées par `Application.java` dans le répertoire [src](src)
 - Ajouter les jars de nos dépendances dans le répertoire [lib](lib)
 
 ## Autres templates
