@@ -8,7 +8,7 @@ import net.fellbaum.jemoji.EmojiManager;
 public class Bonjour {
     public static void main() {
         Optional<Emoji> optionalEmoji = EmojiManager.getByAlias("fr");
-        String emoji = optionalEmoji.map(value -> STR." \{value.getEmoji()}").orElse("");
-        System.out.println(STR."Bonjour\{emoji}");
+        String drapeau = optionalEmoji.map((Emoji emoji) -> emoji.getEmoji()).orElse("");
+        System.out.println("Bonjour " + drapeau);
     }
 }

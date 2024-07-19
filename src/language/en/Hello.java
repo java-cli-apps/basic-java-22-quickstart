@@ -8,7 +8,7 @@ import net.fellbaum.jemoji.EmojiManager;
 public class Hello {
     public static void main() {
         Optional<Emoji> optionalEmoji = EmojiManager.getByAlias("gb");
-        String emoji = optionalEmoji.map(value -> STR." \{value.getEmoji()}").orElse("");
-        System.out.println(STR."Hello \{emoji}");
+        String drapeau = optionalEmoji.map((Emoji emoji) -> emoji.getEmoji()).orElse("");
+        System.out.println("Hello " + drapeau);
     }
 }
