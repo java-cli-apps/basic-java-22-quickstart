@@ -1,4 +1,4 @@
-# Un template d'Application en Ligne de Commande (CLI) utilisant Java 22 et la JEP 458
+# Un template d'Application en Ligne de Commande (CLI) avec Java 22 et la JEP 458
 
 Le template **basic-java-22-quickstart** permet de démarrer une nouvelle application en commande ligne avec Java sans
 utiliser aucun système de build (autre que `make`).
@@ -8,8 +8,6 @@ Ce template nécessite d'utiliser Java 22 ou une version supérieure car il util
 * La [JEP 458](https://openjdk.org/jeps/458) qui permet de lancer un programme Java dont le code est réparti dans
   plusieurs fichiers sources sans avoir besoin de les compiler préalablement
 * La [JEP 463](https://openjdk.org/jeps/463) qui simplifie la déclaration de la méthode `main`
-
-Le package de l'application comprend les sources ainsi que ses dépendances.
 
 Pour démarrer une nouvelle application en utilisant ce template, vous pouvez suivre les étapes suivantes.
 
@@ -34,6 +32,8 @@ Bonjour 🇫🇷
 ```
 
 ## Construire le package de l'application
+
+Le package de l'application comprend les sources ainsi que ses dépendances.
 
 ```bash
 make package
