@@ -9,5 +9,4 @@ void main() {
         case French -> Bonjour.main();
         case English -> Hello.main();
     }
-    System.exit(0);
 }
