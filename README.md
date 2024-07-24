@@ -11,10 +11,14 @@ Ce template nécessite d'utiliser Java 22 ou une version supérieure car il util
 
 ## Créer un dépôt depuis ce template
 
-Après avoir [créé le dépôt GitHub](https://github.com/new?template_name=basic-java-22-quickstart&template_owner=java-cli-apps)
-de votre nouvelle application à partir de ce template, vous pouvez suivre les étapes suivantes pour construire votre application.
+Pour créer un dépôt depuis ce template, on procédera comme suit :
+
+[![asciicast](https://asciinema.org/a/667798.svg)](https://asciinema.org/a/667798)
 
 ## Construire votre application
+
+Après avoir [créé le dépôt GitHub](https://github.com/new?template_name=basic-java-22-quickstart&template_owner=java-cli-apps)
+de votre nouvelle application à partir de ce template, vous pouvez suivre les étapes suivantes pour construire votre application.
 
 ### Changer le nom de l'application
 
