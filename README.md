@@ -13,7 +13,7 @@ Ce template nécessite d'utiliser Java 22 ou une version supérieure car il util
 
 Pour créer un dépôt depuis ce template, on procédera comme suit :
 
-[![asciicast](https://asciinema.org/a/667798.svg)](https://asciinema.org/a/667798)
+<a href="https://asciinema.org/a/667798" target="_blank"><img src="https://asciinema.org/a/667798.svg" /></a>
 
 ## Construire votre application
 
