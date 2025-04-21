@@ -1,4 +1,6 @@
-.DEFAULT_GOAL := help
+help: ## Afficher l'aide
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?## "}; { printf("\033[36m%-20s\033[0m %s\n", $$1, $$2) }'
 
 package: build ## Packager l'application dans un fichier .zip
 	cd $(BUILD) \
@@ -25,10 +27,6 @@ test-from-java: ## Tester l'application localement (en lançant le fichier .java
 
 test-install: .check-install-dir ## Tester l'application installée
 	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh
-
-help: ## Afficher l'aide
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
-		| awk 'BEGIN {FS = ":.*?## "}; { printf("\033[36m%-20s\033[0m %s\n", $$1, $$2) }'
 
 .check-install-dir:
 ifndef DEST_DIR
