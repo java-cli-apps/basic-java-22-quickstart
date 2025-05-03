@@ -10,7 +10,7 @@ install: .check-install-dir ## Installer le package de l'application
 	unzip -q -d $(DEST_DIR) $(BUILD)/$(APP_NAME).zip
 
 build: ## Construire l'application
-	mkdir --parents $(BUILD_APP) $(BUILD_APP)/src $(BUILD_APP)/lib $(BUILD_APP)/bin
+	mkdir --parents $(BUILD_APP)
 	cp --update --recursive src lib bin $(BUILD_APP)
 	cd $(BUILD_APP) \
 		&& mv src/$(STARTER_APP).java src/$(APP_NAME).java \
