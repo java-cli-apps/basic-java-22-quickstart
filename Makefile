@@ -35,6 +35,7 @@ endif
 
 .PHONY: build
 
+APP_NAME ?= BasicQuickstart
 APP_DIR := $(APP_NAME)
 BUILD := build
 BUILD_APP := $(BUILD)/$(APP_DIR)
