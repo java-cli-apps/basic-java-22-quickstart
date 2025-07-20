@@ -94,6 +94,6 @@ Il ne nous reste plus qu'à :
 
 ## Autres templates
 
-Si vous ne disposez pas de Java 22, vous pouvez utiliser le template [basic-java-quickstart](https://github.com/java-cli-apps/basic-java-quickstart)
+Si vous ne disposez pas de Java 22, vous pouvez utiliser le template [basic-java-11-quickstart](https://github.com/java-cli-apps/basic-java-11-quickstart)
 qui ne requiert que la version 11 de Java. Il est alors nécessaire que tout le code Java réside dans le même fichier
 comme décrit dans la [JEP 330](https://openjdk.org/jeps/330).
