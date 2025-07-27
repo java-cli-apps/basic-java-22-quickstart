@@ -19,13 +19,13 @@ build: ## Construire l'application
 clean: ## Nettoyer le répertoire de construction
 	rm --force --recursive $(BUILD)
 
-test: ## Tester l'application localement
+run-app: ## Lancer l'application localement
 	./bin/$(STARTER_APP).sh
 
-test-from-java: ## Tester l'application localement (en lançant le fichier .java)
+run-app-from-java: ## Lancer l'application localement (en lançant le fichier .java)
 	./src/$(STARTER_APP).java
 
-test-install: .check-install-dir ## Tester l'application installée
+run-installed-app: .check-install-dir ## Lancer l'application installée
 	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh
 
 .check-install-dir:

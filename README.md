@@ -32,7 +32,7 @@ $ export APP_NAME=MyCmdLine
 ### Lancer l'application localement
 
 ```bash
-$ make test
+$ make run-app
 ```
 
 ```console
@@ -78,7 +78,7 @@ unzip -q -d /home/user build/MyCmdLine.zip
 ### Lancer l'application installée
 
 ```bash
-$ DEST_DIR=/home/user make test-install
+$ DEST_DIR=/home/user make run-installed-app
 ```
 
 ```console
