@@ -2,11 +2,11 @@ help: ## Afficher l'aide
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| awk 'BEGIN {FS = ":.*?## "}; { printf("\033[36m%-20s\033[0m %s\n", $$1, $$2) }'
 
-package: build ## Packager l'application dans un fichier .zip
+package: build ## Construire le livrable de l'application dans un fichier .zip
 	cd $(BUILD) \
 		&& zip --quiet --recurse-paths $(APP_NAME).zip $(APP_DIR)
 
-install: .check-install-dir ## Installer le package de l'application
+install: .check-install-dir ## Installer l'application
 	unzip -q -d $(DEST_DIR) $(BUILD)/$(APP_NAME).zip
 
 build: ## Construire l'application
